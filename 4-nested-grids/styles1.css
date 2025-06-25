@@ -1,0 +1,36 @@
+body {
+    font-family: Verdana, 'serif';
+    background: #fff;
+}
+
+#content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+#content div {
+    background: #3bbced;
+    padding: 20px;
+}
+
+#content div:nth-child(even) {
+    background: #777777;
+}
+
+.nested {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+
+    /*they are the same*/
+    grid-column: span 3;
+    /*grid-column: 1 / 4*/
+}
+
+.nested p {
+    border: 1px solid #fff;
+    padding: 20px;
+    margin: 0;
+}
